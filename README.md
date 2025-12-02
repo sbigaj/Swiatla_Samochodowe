@@ -87,7 +87,7 @@ Pamięć (memory)
    
 Procesor (processor)
 
-1. LightingECU - Procesor ECU obsługujący proces sterowania oświetleniem, zdefiniowany jako działający w trybie FIFO.
+1. LightingECU - Procesor ECU obsługujący proces sterowania oświetleniem.
 
 Szyna komunikacyjna (bus)
 
