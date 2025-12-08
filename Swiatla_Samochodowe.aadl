@@ -1,0 +1,675 @@
+package Swiatla_Samochodowe
+public
+  with Data_Model;
+
+  --------------------------------------------------------------------------
+  -- DANE (Data)
+  --------------------------------------------------------------------------
+
+--Dane wejściowe--
+  data LightSwitchMode
+    properties
+      Data_Model::Data_Representation => Enum;
+  end LightSwitchMode;
+
+  data AmbientLightValue
+    properties
+      Data_Model::Data_Representation => Integer;
+  end AmbientLightValue;
+  
+  data IndicatorCommand
+    properties
+      Data_Model::Data_Representation => Enum;
+  end IndicatorCommand;
+
+  data HighBeamCommand
+    properties
+      Data_Model::Data_Representation => Enum;
+  end HighBeamCommand;
+  
+  data FogLightFrontSwitchState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end FogLightFrontSwitchState;
+
+  data FogLightRearSwitchState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end FogLightRearSwitchState;
+  
+  data HazardCommand
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end HazardCommand;
+
+  data BrakeStatus
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end BrakeStatus;
+
+  data RearGearStatus
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end RearGearStatus;
+  
+  data ApproachingSensor
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end ApproachingSensor;
+
+--Dane wyjściowe--
+  data PositionLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end PositionLightsState;
+  
+  data LowBeamLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end LowBeamLightsState;
+
+  data HighBeamLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end HighBeamLightsState;
+  
+  data IndicatorsLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end IndicatorsLightsState;
+  
+  data DayLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end DayLightsState;
+  
+  data FrontFogLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end FrontFogLightsState;
+  
+  data StopLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end StopLightsState;
+  
+  data ReverseLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end ReverseLightsState;
+ 
+  data RearFogLightsState
+    properties
+      Data_Model::Data_Representation => Boolean;
+  end RearFogLightsState; 
+  
+  --------------------------------------------------------------------------
+  -- URZĄDZENIA WEJŚCIOWE
+  --------------------------------------------------------------------------
+
+  device LightSwitchLever
+    features
+      lightswitch : out data port LightSwitchMode;
+      can_access : requires bus access CAN_Bus;
+    flows
+      light_switch_src: flow source lightswitch;
+  end LightSwitchLever;
+
+  device implementation LightSwitchLever.impl
+  end LightSwitchLever.impl;
+ 
+  device AmbientLightSensor
+    features
+      lux : out data port AmbientLightValue;
+      can_access : requires bus access CAN_Bus;
+    flows
+      ambient_src: flow source lux;
+  end AmbientLightSensor;
+
+  device implementation AmbientLightSensor.impl
+  end AmbientLightSensor.impl;
+
+  device IndicatorAndHighBeamLever
+    features
+      indicator : out data port IndicatorCommand;
+      high_beam : out data port HighBeamCommand;
+      can_access : requires bus access CAN_Bus;
+    flows
+      indicator_src: flow source indicator;
+      high_beam_src: flow source high_beam;
+  end IndicatorAndHighBeamLever;
+
+  device implementation IndicatorAndHighBeamLever.impl
+  end IndicatorAndHighBeamLever.impl;
+  
+  device FogLightFrontSwitch
+    features
+      fog_front : out data port FogLightFrontSwitchState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      fog_front_src: flow source fog_front;
+  end FogLightFrontSwitch;
+
+  device implementation FogLightFrontSwitch.impl
+  end FogLightFrontSwitch.impl;
+
+  device FogLightRearSwitch
+    features
+      fog_rear : out data port FogLightRearSwitchState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      fog_rear_src: flow source fog_rear;
+  end FogLightRearSwitch;
+
+  device implementation FogLightRearSwitch.impl
+  end FogLightRearSwitch.impl;
+
+  device HazardButton
+    features
+      hazard : out data port HazardCommand;
+      can_access : requires bus access CAN_Bus;
+    flows
+      hazard_src: flow source hazard;
+  end HazardButton;
+
+  device implementation HazardButton.impl
+  end HazardButton.impl;
+
+  device BrakePedalSwitch
+    features
+      brake : out data port BrakeStatus;
+      can_access : requires bus access CAN_Bus;
+    flows
+      brake_src: flow source brake;
+  end BrakePedalSwitch;
+
+  device implementation BrakePedalSwitch.impl
+  end BrakePedalSwitch.impl;
+  
+  device RearGearSwitch
+    features
+      rear_gear : out data port RearGearStatus;
+      can_access : requires bus access CAN_Bus;
+    flows
+      rear_gear_src: flow source rear_gear;
+  end RearGearSwitch;
+
+  device implementation RearGearSwitch.impl
+  end RearGearSwitch.impl;
+  
+  device ApproachingCarSensor
+    features
+      app_car : out data port ApproachingSensor;
+      can_access : requires bus access CAN_Bus;
+    flows
+      approach_src: flow source app_car;
+  end ApproachingCarSensor;
+
+  device implementation ApproachingCarSensor.impl
+  end ApproachingCarSensor.impl;
+  
+  --------------------------------------------------------------------------
+  -- URZĄDZENIA WYJŚCIOWE
+  --------------------------------------------------------------------------
+
+  device PositionLights
+    features
+      pos : in data port PositionLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      pos_sink: flow sink pos;
+  end PositionLights;
+
+  device implementation PositionLights.impl
+  end PositionLights.impl;
+  
+  device LowBeamLights
+    features
+      l_beam : in data port LowBeamLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      low_beam_sink: flow sink l_beam;
+  end LowBeamLights;
+
+  device implementation LowBeamLights.impl
+  end LowBeamLights.impl;
+  
+  device HighBeamLights
+    features
+      h_beam : in data port HighBeamLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      high_beam_sink: flow sink h_beam;
+  end HighBeamLights;
+
+  device implementation HighBeamLights.impl
+  end HighBeamLights.impl;
+  
+  device IndicatorLights
+    features
+      ind  : in data port IndicatorsLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      indicator_sink: flow sink ind;
+  end IndicatorLights;
+
+  device implementation IndicatorLights.impl
+  end IndicatorLights.impl;
+  
+  device DayLights
+    features
+      day  : in data port DayLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      day_sink: flow sink day;
+  end DayLights;
+
+  device implementation DayLights.impl
+  end DayLights.impl;
+
+  device FrontFogLights
+    features
+      f_fog : in data port FrontFogLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      front_fog_sink: flow sink f_fog;
+  end FrontFogLights;
+
+  device implementation FrontFogLights.impl
+  end FrontFogLights.impl;
+
+  device StopLights
+    features
+      on : in data port StopLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      stop_sink: flow sink on;
+  end StopLights;
+
+  device implementation StopLights.impl
+  end StopLights.impl; 
+
+  device ReverseLights
+    features
+      on : in data port ReverseLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      reverse_sink: flow sink on;
+  end ReverseLights;
+
+  device implementation ReverseLights.impl
+  end ReverseLights.impl; 
+  
+  device RearFogLights
+    features
+      on : in data port RearFogLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      rear_fog_sink: flow sink on;
+  end RearFogLights;
+
+  device implementation RearFogLights.impl
+  end RearFogLights.impl; 
+  
+  device PlatesLights
+    features
+      on : in data port PositionLightsState;
+      can_access : requires bus access CAN_Bus;
+    flows
+      plates_sink: flow sink on;
+  end PlatesLights;
+
+  device implementation PlatesLights.impl
+  end PlatesLights.impl; 
+  
+  --------------------------------------------------------------------------
+  -- WĄTKI (Threads)
+  --------------------------------------------------------------------------
+
+  thread MainLightControl
+    features
+      light_input: in data port LightSwitchMode;
+      ambient_input: in data port AmbientLightValue;
+      position_output: out data port PositionLightsState;
+      low_beam_output: out data port LowBeamLightsState;
+      day_lights_output: out data port DayLightsState;
+    flows
+      position_flow: flow path light_input -> position_output;
+      low_beam_flow: flow path light_input -> low_beam_output;
+      low_beam_auto_flow: flow path ambient_input -> low_beam_output;
+      day_lights_flow: flow path light_input -> day_lights_output;
+    properties
+      Compute_Execution_Time => 2 ms .. 5 ms;
+      Period => 100 ms;
+      Deadline => 100 ms;
+  end MainLightControl;
+
+  thread implementation MainLightControl.impl
+  end MainLightControl.impl;
+
+  thread HighBeamControl
+    features
+      high_beam_input: in data port HighBeamCommand;
+      low_beam_input: in data port LowBeamLightsState;
+      approach_input: in data port ApproachingSensor;
+      high_beam_output: out data port HighBeamLightsState;
+    flows
+      high_beam_flow: flow path high_beam_input -> high_beam_output;
+      high_beam_auto_off: flow path approach_input -> high_beam_output;
+    properties
+      Compute_Execution_Time => 2 ms .. 5 ms;
+      Period => 50 ms;
+      Deadline => 50 ms;
+  end HighBeamControl;
+
+  thread implementation HighBeamControl.impl
+  end HighBeamControl.impl;
+
+  thread IndicatorsControl
+    features
+      indicator_input: in data port IndicatorCommand;
+      hazard_input: in data port HazardCommand;
+      indicator_output: out data port IndicatorsLightsState;
+    flows
+      indicator_flow: flow path indicator_input -> indicator_output;
+      hazard_flow: flow path hazard_input -> indicator_output;
+    properties
+      Compute_Execution_Time => 2 ms .. 4 ms;
+      Period => 50 ms;
+      Deadline => 50 ms;
+  end IndicatorsControl;
+
+  thread implementation IndicatorsControl.impl
+  end IndicatorsControl.impl;
+
+  thread FogLightsControl
+    features
+      front_input: in data port FogLightFrontSwitchState;
+      rear_input: in data port FogLightRearSwitchState;
+      low_beam_input: in data port LowBeamLightsState;
+      front_output: out data port FrontFogLightsState;
+      rear_output: out data port RearFogLightsState;
+    flows
+      front_fog_flow: flow path front_input -> front_output;
+      rear_fog_flow: flow path rear_input -> rear_output;
+    properties
+      Compute_Execution_Time => 2 ms .. 5 ms;
+      Period => 100 ms;
+      Deadline => 100 ms;
+  end FogLightsControl;
+
+  thread implementation FogLightsControl.impl
+  end FogLightsControl.impl;
+  
+  thread StopLightControl
+    features
+      brake_input: in data port BrakeStatus;
+      stop_output: out data port StopLightsState;
+    flows
+      brake_flow: flow path brake_input -> stop_output;
+    properties
+      Compute_Execution_Time => 1 ms .. 2 ms;
+      Period => 20 ms; 
+      Deadline => 20 ms;
+  end StopLightControl;
+
+  thread implementation StopLightControl.impl
+  end StopLightControl.impl;
+  
+  thread ReverseLightControl
+    features
+      rear_gear_input: in data port RearGearStatus;
+      reverse_output: out data port ReverseLightsState;
+    flows
+      reverse_flow: flow path rear_gear_input -> reverse_output;
+    properties
+      Compute_Execution_Time => 2 ms .. 4 ms;
+      Period => 50 ms;
+      Deadline => 50 ms;
+  end ReverseLightControl;
+
+  thread implementation ReverseLightControl.impl
+  end ReverseLightControl.impl;
+  
+  --------------------------------------------------------------------------
+  -- PROCES (Process)
+  --------------------------------------------------------------------------
+
+  process CarLightsController
+    features
+      light_input: in data port LightSwitchMode;
+      ambient_input: in data port AmbientLightValue;
+      high_beam_input: in data port HighBeamCommand;
+      approach_input: in data port ApproachingSensor;
+      indicator_input: in data port IndicatorCommand;
+      hazard_input: in data port HazardCommand;
+      front_fog_input: in data port FogLightFrontSwitchState;
+      rear_fog_input: in data port FogLightRearSwitchState;
+      brake_input: in data port BrakeStatus;
+      rear_gear_input: in data port RearGearStatus;
+      position_output: out data port PositionLightsState;
+      low_beam_output: out data port LowBeamLightsState;
+      day_lights_output: out data port DayLightsState;
+      high_beam_output: out data port HighBeamLightsState;
+      indicator_output: out data port IndicatorsLightsState;
+      front_fog_output: out data port FrontFogLightsState;
+      rear_fog_output: out data port RearFogLightsState;
+      stop_output: out data port StopLightsState;
+      reverse_output: out data port ReverseLightsState;
+      plates_output: out data port PositionLightsState;
+    flows
+      position_process_flow: flow path light_input -> position_output;
+      brake_process_flow: flow path brake_input -> stop_output;
+      high_beam_process_flow: flow path high_beam_input -> high_beam_output;
+      hazard_process_flow: flow path hazard_input -> indicator_output;
+  end CarLightsController;
+
+  process implementation CarLightsController.impl
+    subcomponents
+      main_light_thread: thread MainLightControl.impl;
+      high_beam_thread: thread HighBeamControl.impl;
+      indicators_thread: thread IndicatorsControl.impl;
+      fog_lights_thread: thread FogLightsControl.impl;
+      stop_lights_thread: thread StopLightControl.impl;
+      reverse_lights_thread: thread ReverseLightControl.impl;
+    connections
+      switch_conn: port light_input -> main_light_thread.light_input;
+      ambient_conn: port ambient_input -> main_light_thread.ambient_input;
+      high_beam_conn: port high_beam_input -> high_beam_thread.high_beam_input;
+      approach_conn: port approach_input -> high_beam_thread.approach_input;
+      indicator_conn: port indicator_input -> indicators_thread.indicator_input;
+      hazard_conn: port hazard_input -> indicators_thread.hazard_input;
+      front_fog_conn: port front_fog_input -> fog_lights_thread.front_input;
+      rear_fog_conn: port rear_fog_input -> fog_lights_thread.rear_input;
+      brake_conn: port brake_input -> stop_lights_thread.brake_input;
+      rear_gear_conn: port rear_gear_input -> reverse_lights_thread.rear_gear_input;
+      
+      position_conn: port main_light_thread.position_output -> position_output;
+      plates_conn: port main_light_thread.position_output -> plates_output;
+      low_beam_conn: port main_light_thread.low_beam_output -> low_beam_output;
+      low_beam_high_conn: port main_light_thread.low_beam_output -> high_beam_thread.low_beam_input;
+      low_beam_fog_conn: port main_light_thread.low_beam_output -> fog_lights_thread.low_beam_input;
+      day_lights_conn: port main_light_thread.day_lights_output -> day_lights_output;
+      high_beam1_conn: port high_beam_thread.high_beam_output -> high_beam_output;
+      indicator1_conn: port indicators_thread.indicator_output -> indicator_output;
+      front_fog1_conn: port fog_lights_thread.front_output -> front_fog_output;
+      rear_fog1_conn: port fog_lights_thread.rear_output -> rear_fog_output;
+      stop_conn: port stop_lights_thread.stop_output -> stop_output;
+      reverse_conn: port reverse_lights_thread.reverse_output -> reverse_output;
+    flows
+      position_process_flow: flow path 
+        light_input -> switch_conn -> main_light_thread.position_flow -> 
+        position_conn -> position_output;
+      brake_process_flow: flow path 
+        brake_input -> brake_conn -> stop_lights_thread.brake_flow -> 
+        stop_conn -> stop_output;
+      high_beam_process_flow: flow path 
+        high_beam_input -> high_beam_conn -> high_beam_thread.high_beam_flow -> 
+        high_beam1_conn -> high_beam_output;
+      hazard_process_flow: flow path 
+        hazard_input -> hazard_conn -> indicators_thread.hazard_flow -> 
+        indicator1_conn -> indicator_output;
+  end CarLightsController.impl;
+  
+  --------------------------------------------------------------------------
+  -- PROCESOR I MAGISTRALA
+  --------------------------------------------------------------------------
+  
+  processor ECU
+    features
+      can: requires bus access CAN_Bus;
+  end ECU;
+
+  processor implementation ECU.impl
+  end ECU.impl;
+  
+  bus CAN_Bus
+    properties
+      Data_Size => 8 bytes;
+      Transmission_Time => [Fixed => 2 ms .. 5 ms;];
+  end CAN_Bus;
+
+  bus implementation CAN_Bus.impl
+  end CAN_Bus.impl;
+  
+  --------------------------------------------------------------------------
+  -- SYSTEM
+  --------------------------------------------------------------------------
+
+  system CarLightingControlSystem
+  end CarLightingControlSystem;
+
+  system implementation CarLightingControlSystem.impl
+    subcomponents
+      ecu: processor ECU.impl;
+      can_bus: bus CAN_Bus.impl;
+      
+      light_switch: device LightSwitchLever.impl;
+      ambient_sensor: device AmbientLightSensor.impl;
+      indicator_lever: device IndicatorAndHighBeamLever.impl;
+      fog_front_switch: device FogLightFrontSwitch.impl;
+      fog_rear_switch: device FogLightRearSwitch.impl;
+      hazard_button: device HazardButton.impl;
+      brake_switch: device BrakePedalSwitch.impl;
+      rear_gear_switch: device RearGearSwitch.impl;
+      approach_sensor: device ApproachingCarSensor.impl;
+
+      position_lights: device PositionLights.impl;
+      lowbeam_lights: device LowBeamLights.impl;
+      highbeam_lights: device HighBeamLights.impl;
+      indicator_lights: device IndicatorLights.impl;
+      day_lights: device DayLights.impl;
+      front_fog_lights: device FrontFogLights.impl;
+      stop_light: device StopLights.impl;
+      reverse_light: device ReverseLights.impl;
+      rear_fog_lights: device RearFogLights.impl;
+      plates_lights: device PlatesLights.impl;
+
+      controller_proc: process CarLightsController.impl;
+      
+    connections
+      switch_conn: port light_switch.lightswitch -> controller_proc.light_input;
+      ambient_conn: port ambient_sensor.lux -> controller_proc.ambient_input;
+      high_beam_conn: port indicator_lever.high_beam -> controller_proc.high_beam_input;
+      approach_conn: port approach_sensor.app_car -> controller_proc.approach_input;
+      indicator_conn: port indicator_lever.indicator -> controller_proc.indicator_input;
+      hazard_conn: port hazard_button.hazard -> controller_proc.hazard_input;
+      front_fog_conn: port fog_front_switch.fog_front -> controller_proc.front_fog_input;
+      rear_fog_conn: port fog_rear_switch.fog_rear -> controller_proc.rear_fog_input;
+      brake_conn: port brake_switch.brake -> controller_proc.brake_input;
+      rear_gear_conn: port rear_gear_switch.rear_gear -> controller_proc.rear_gear_input;
+      
+      position_conn: port controller_proc.position_output -> position_lights.pos;
+      plates_conn: port controller_proc.plates_output -> plates_lights.on;
+      low_beam_conn: port controller_proc.low_beam_output -> lowbeam_lights.l_beam;
+      day_lights_conn: port controller_proc.day_lights_output -> day_lights.day;
+      high_beam1_conn: port controller_proc.high_beam_output -> highbeam_lights.h_beam;
+      indicator1_conn: port controller_proc.indicator_output -> indicator_lights.ind;
+      front_fog1_conn: port controller_proc.front_fog_output -> front_fog_lights.f_fog;
+      rear_fog1_conn: port controller_proc.rear_fog_output -> rear_fog_lights.on;
+      stop_conn: port controller_proc.stop_output -> stop_light.on;
+      reverse_conn: port controller_proc.reverse_output -> reverse_light.on;
+      
+      ba_ecu: bus access can_bus <-> ecu.can;
+      
+      ba_switch: bus access can_bus <-> light_switch.can_access;
+      ba_ambient: bus access can_bus <-> ambient_sensor.can_access;
+      ba_indicator: bus access can_bus <-> indicator_lever.can_access;
+      ba_fog_front: bus access can_bus <-> fog_front_switch.can_access;
+      ba_fog_rear: bus access can_bus <-> fog_rear_switch.can_access;
+      ba_hazard: bus access can_bus <-> hazard_button.can_access;
+      ba_brake: bus access can_bus <-> brake_switch.can_access;
+      ba_rear_gear: bus access can_bus <-> rear_gear_switch.can_access;
+      ba_approach: bus access can_bus <-> approach_sensor.can_access;
+      
+      ba_position: bus access can_bus <-> position_lights.can_access;
+      ba_lowbeam: bus access can_bus <-> lowbeam_lights.can_access;
+      ba_highbeam: bus access can_bus <-> highbeam_lights.can_access;
+      ba_indicator_out: bus access can_bus <-> indicator_lights.can_access;
+      ba_day: bus access can_bus <-> day_lights.can_access;
+      ba_front_fog: bus access can_bus <-> front_fog_lights.can_access;
+      ba_stop: bus access can_bus <-> stop_light.can_access;
+      ba_reverse: bus access can_bus <-> reverse_light.can_access;
+      ba_rear_fog: bus access can_bus <-> rear_fog_lights.can_access;
+      ba_plates: bus access can_bus <-> plates_lights.can_access;
+      
+    flows
+      -- ========================================================================
+      -- END-TO-END FLOWS - Kompletne ścieżki przez cały system
+      -- ========================================================================
+      
+      -- FLOW 1: ŚWIATŁA HAMOWANIA
+      brake_to_stop_etef: end to end flow
+        brake_switch.brake_src -> brake_conn -> 
+        controller_proc.brake_process_flow -> 
+        stop_conn -> stop_light.stop_sink
+        {Latency => 10 ms .. 80 ms;};  
+      
+      -- FLOW 2: ŚWIATŁA POZYCYJNE
+      position_lights_etef: end to end flow
+        light_switch.light_switch_src -> switch_conn -> 
+        controller_proc.position_process_flow -> 
+        position_conn -> position_lights.pos_sink
+        {Latency => 50 ms .. 150 ms;}; 
+      
+      -- FLOW 3: DŁUGIE ŚWIATŁA
+      high_beam_etef: end to end flow
+        indicator_lever.high_beam_src -> high_beam_conn -> 
+        controller_proc.high_beam_process_flow -> 
+        high_beam1_conn -> highbeam_lights.high_beam_sink
+        {Latency => 30 ms .. 100 ms;};
+      
+      -- FLOW 4: ŚWIATŁA AWARYJNE
+      hazard_lights_etef: end to end flow
+        hazard_button.hazard_src -> hazard_conn -> 
+        controller_proc.hazard_process_flow -> 
+        indicator1_conn -> indicator_lights.indicator_sink
+        {Latency => 20 ms .. 80 ms;}; 
+        
+    properties
+      Actual_Processor_Binding => (reference(ecu)) applies to controller_proc;
+      
+      Actual_Connection_Binding => (reference(can_bus)) applies to switch_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to ambient_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to high_beam_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to approach_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to indicator_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to hazard_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to front_fog_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to rear_fog_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to brake_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to rear_gear_conn;
+      
+      Actual_Connection_Binding => (reference(can_bus)) applies to position_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to plates_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to low_beam_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to day_lights_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to high_beam1_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to indicator1_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to front_fog1_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to rear_fog1_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to stop_conn;
+      Actual_Connection_Binding => (reference(can_bus)) applies to reverse_conn;
+  end CarLightingControlSystem.impl;
+
+end Swiatla_Samochodowe;
