@@ -185,12 +185,25 @@ Model zawiera pełną specyfikację przepływów umożliwiającą analizę pełn
 ### Analiza przepływu pełnego (End-to-End Flows):
 
 Po przez implementację informacji dotyczących przepływu e urządzeniach wejściowych, wątkach oraz urządzeniach wyjściowych przeprowadzono analizę pełnego przepływu dla czterech wybranych ścieżek przepływu danych:
-* ** Ścieżka od hamulca do światła stopu ** - Pedał hamulca → CAN → ECU/StopLightControl → CAN → Światło STOP - Oczekiwany czas: 10-80ms
-* ** Ścieżka załączenia świateł pozycyjnych ** - Dźwignia świateł → CAN → ECU/MainLightControl → CAN → Światła pozycyjne - Oczekiwany czas: 50-150ms
-* ** Ścieżka załączenia świateł drogowych ** - Dźwignia długich → CAN → ECU/HighBeamControl → CAN → Długie - Oczekiwany czas: 30-100ms
-* ** Ścieżka załączenia świateł awaryjnych ** - Przycisk awaryjnych → CAN → ECU/IndicatorsControl → CAN → Kierunkowskazy - Oczekiwany czas: 20-80ms
+* **Ścieżka od hamulca do światła stopu** - Pedał hamulca → CAN → ECU/StopLightControl → CAN → Światło STOP - Oczekiwany czas: 10-80ms
+* **Ścieżka załączenia świateł pozycyjnych** - Dźwignia świateł → CAN → ECU/MainLightControl → CAN → Światła pozycyjne - Oczekiwany czas: 50-150ms
+* **Ścieżka załączenia świateł drogowych** - Dźwignia długich → CAN → ECU/HighBeamControl → CAN → Długie - Oczekiwany czas: 30-100ms
+* **Ścieżka załączenia świateł awaryjnych** - Przycisk awaryjnych → CAN → ECU/IndicatorsControl → CAN → Kierunkowskazy - Oczekiwany czas: 20-80ms
 
-### Jak uruchomić analizę:
+Ustawienia analizy przepływu danych:
+- typ systemu: asynchroniczny
+- najgorszy czas przetwarzania: maksymalny czaas wykonania obliczeń
+- czas kolejkowania: wyłączony
+
+### Uzyskane analizy
+
+Ścieżka od hamulca do światła stopu:
+
+![Stop](Analiza_swiatlo_stopu.png)
+
+Ścieżka załączenia świateł pozycyjnych:
+
+![Pozycyjne](Analiza_swiatla_pozycyjne.png)
 
 1. Otwórz model w OSATE
 2. Zainstancjonuj system: prawym na `CarLightingControlSystem.impl` → **Instantiate**
