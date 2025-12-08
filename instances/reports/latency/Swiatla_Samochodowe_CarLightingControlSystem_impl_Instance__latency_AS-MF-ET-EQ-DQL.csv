@@ -1,0 +1,99 @@
+Latency analysis with preference settings: asynchronous system/major partition frame/worst case as max compute execution time/best case as empty queue/queuing latency disabled
+
+"Latency results for end-to-end flow 'brake_to_stop_etef' of system 'CarLightingControlSystem.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device brake_switch (source brake_src),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection brake_switch.brake -> controller_proc.stop_lights_thread.brake_input,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+thread controller_proc.stop_lights_thread (path brake_flow),0.0ms,0.0ms,sampling,0.0ms,20.0ms,sampling,Assume Periodic dispatch because period is set,Best case 0 ms worst case 20.0ms (period) sampling delay
+thread controller_proc.stop_lights_thread (path brake_flow),0.0ms,1.0ms,processing time,0.0ms,2.0ms,processing time
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection controller_proc.stop_lights_thread.stop_output -> stop_light.on,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+device stop_light (sink stop_sink),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+Latency Total,0.0ms,5.0ms,,0.0ms,32.0ms
+Specified End To End Latency,,10.0ms,,,80.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 10,0ms (better response time)
+WARNING,Minimum actual latency total 5,00ms less than expected minimum end to end latency 10,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 32,0ms is less or equal to expected maximum end to end latency 80,0ms
+
+
+
+"Latency results for end-to-end flow 'position_lights_etef' of system 'CarLightingControlSystem.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device light_switch (source light_switch_src),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection light_switch.lightswitch -> controller_proc.main_light_thread.light_input,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+thread controller_proc.main_light_thread (path position_flow),0.0ms,0.0ms,sampling,0.0ms,100.0ms,sampling,Assume Periodic dispatch because period is set,Best case 0 ms worst case 100.0ms (period) sampling delay
+thread controller_proc.main_light_thread (path position_flow),0.0ms,2.0ms,processing time,0.0ms,5.0ms,processing time
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection controller_proc.main_light_thread.position_output -> position_lights.pos,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+device position_lights (sink pos_sink),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+Latency Total,0.0ms,6.0ms,,0.0ms,115.0ms
+Specified End To End Latency,,50.0ms,,,150.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 50,0ms (better response time)
+WARNING,Minimum actual latency total 6,00ms less than expected minimum end to end latency 50,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 115,0ms is less or equal to expected maximum end to end latency 150,0ms
+WARNING,Jitter of actual latency total 6,00..115,0ms exceeds expected end to end latency jitter 50,0..150,0ms
+
+
+
+"Latency results for end-to-end flow 'high_beam_etef' of system 'CarLightingControlSystem.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device indicator_lever (source high_beam_src),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection indicator_lever.high_beam -> controller_proc.high_beam_thread.high_beam_input,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+thread controller_proc.high_beam_thread (path high_beam_flow),0.0ms,0.0ms,sampling,0.0ms,50.0ms,sampling,Assume Periodic dispatch because period is set,Best case 0 ms worst case 50.0ms (period) sampling delay
+thread controller_proc.high_beam_thread (path high_beam_flow),0.0ms,2.0ms,processing time,0.0ms,5.0ms,processing time
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection controller_proc.high_beam_thread.high_beam_output -> highbeam_lights.h_beam,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+device highbeam_lights (sink high_beam_sink),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+Latency Total,0.0ms,6.0ms,,0.0ms,65.0ms
+Specified End To End Latency,,30.0ms,,,100.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 30,0ms (better response time)
+WARNING,Minimum actual latency total 6,00ms less than expected minimum end to end latency 30,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 65,0ms is less or equal to expected maximum end to end latency 100,0ms
+
+
+
+"Latency results for end-to-end flow 'hazard_lights_etef' of system 'CarLightingControlSystem.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device hazard_button (source hazard_src),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection hazard_button.hazard -> controller_proc.indicators_thread.hazard_input,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+thread controller_proc.indicators_thread (path hazard_flow),0.0ms,0.0ms,sampling,0.0ms,50.0ms,sampling,Assume Periodic dispatch because period is set,Best case 0 ms worst case 50.0ms (period) sampling delay
+thread controller_proc.indicators_thread (path hazard_flow),0.0ms,2.0ms,processing time,0.0ms,4.0ms,processing time
+(bus can_bus),0.0ms,2.0ms,transmission time,0.0ms,5.0ms,transmission time,Using data transfer time
+(bus can_bus),0.0ms,0.0ms,queued,0.0ms,0.0ms,queued,Ignoring queuing time of 35.0ms
+(bus can_bus),0.0ms,0.0ms,sampling protocol/bus,0.0ms,0.0ms,sampling protocol/bus
+connection controller_proc.indicators_thread.indicator_output -> indicator_lights.ind,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency,Adding latency subtotal from protocols and hardware - shown with ()
+device indicator_lights (sink indicator_sink),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+Latency Total,0.0ms,6.0ms,,0.0ms,64.0ms
+Specified End To End Latency,,20.0ms,,,80.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 20,0ms (better response time)
+WARNING,Minimum actual latency total 6,00ms less than expected minimum end to end latency 20,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 64,0ms is less or equal to expected maximum end to end latency 80,0ms
+
+
+

@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="ASCII"?>
+<result:AnalysisResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:result="http://www.osate.org/result/Result" analysis="latency" message="AS-MF-ET-EQ-DQL">
+  <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787000"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <parameters value="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001"/>
+  <results message="Latency results for brake_to_stop_etef" resultType="SUCCESS">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="5.0"/>
+    <values xsi:type="result:RealValue" value="32.0"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue" value="10.0"/>
+    <values xsi:type="result:RealValue" value="80.0"/>
+    <diagnostics diagnosticType="WARNING" message="Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 10,0ms (better response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.0"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Minimum actual latency total 5,00ms less than expected minimum end to end latency 10,0ms (faster actual minimum response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.0"/>
+    </diagnostics>
+    <diagnostics diagnosticType="INFO" message="Maximum actual latency total 32,0ms is less or equal to expected maximum end to end latency 80,0ms">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.0"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="source brake_src"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.7"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.33"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.33"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="20.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="path brake_flow"/>
+      <diagnostics diagnosticType="INFO" message="Assume Periodic dispatch because period is set">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.4"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Best case 0 ms worst case 20.0ms (period) sampling delay">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.4"/>
+      </diagnostics>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.4"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="1.0"/>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="path brake_flow"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.4"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.57"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.57"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="sink stop_sink"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.16"/>
+    </subResults>
+    <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.0"/>
+  </results>
+  <results message="Latency results for position_lights_etef" resultType="SUCCESS">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="6.0"/>
+    <values xsi:type="result:RealValue" value="115.0"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue" value="50.0"/>
+    <values xsi:type="result:RealValue" value="150.0"/>
+    <diagnostics diagnosticType="WARNING" message="Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 50,0ms (better response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.1"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Minimum actual latency total 6,00ms less than expected minimum end to end latency 50,0ms (faster actual minimum response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.1"/>
+    </diagnostics>
+    <diagnostics diagnosticType="INFO" message="Maximum actual latency total 115,0ms is less or equal to expected maximum end to end latency 150,0ms">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.1"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Jitter of actual latency total 6,00..115,0ms exceeds expected end to end latency jitter 50,0..150,0ms">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.1"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="source light_switch_src"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.20"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.20"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="100.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="path position_flow"/>
+      <diagnostics diagnosticType="INFO" message="Assume Periodic dispatch because period is set">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.0"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Best case 0 ms worst case 100.0ms (period) sampling delay">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.0"/>
+      </diagnostics>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.0"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="5.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="path position_flow"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.0"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.49"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.49"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="sink pos_sink"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.10"/>
+    </subResults>
+    <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.1"/>
+  </results>
+  <results message="Latency results for high_beam_etef" resultType="SUCCESS">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="6.0"/>
+    <values xsi:type="result:RealValue" value="65.0"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue" value="30.0"/>
+    <values xsi:type="result:RealValue" value="100.0"/>
+    <diagnostics diagnosticType="WARNING" message="Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 30,0ms (better response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.2"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Minimum actual latency total 6,00ms less than expected minimum end to end latency 30,0ms (faster actual minimum response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.2"/>
+    </diagnostics>
+    <diagnostics diagnosticType="INFO" message="Maximum actual latency total 65,0ms is less or equal to expected maximum end to end latency 100,0ms">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.2"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="source high_beam_src"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.3"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.25"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.25"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="50.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="path high_beam_flow"/>
+      <diagnostics diagnosticType="INFO" message="Assume Periodic dispatch because period is set">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.1"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Best case 0 ms worst case 50.0ms (period) sampling delay">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.1"/>
+      </diagnostics>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="5.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="path high_beam_flow"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.1"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.53"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.53"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="sink high_beam_sink"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.12"/>
+    </subResults>
+    <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.2"/>
+  </results>
+  <results message="Latency results for hazard_lights_etef" resultType="SUCCESS">
+    <values xsi:type="result:StringValue" value=""/>
+    <values xsi:type="result:RealValue" value="6.0"/>
+    <values xsi:type="result:RealValue" value="64.0"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue"/>
+    <values xsi:type="result:RealValue" value="20.0"/>
+    <values xsi:type="result:RealValue" value="80.0"/>
+    <diagnostics diagnosticType="WARNING" message="Minimum specified flow latency total 0,000ms less than expected minimum end to end latency 20,0ms (better response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.3"/>
+    </diagnostics>
+    <diagnostics diagnosticType="WARNING" message="Minimum actual latency total 6,00ms less than expected minimum end to end latency 20,0ms (faster actual minimum response time)">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.3"/>
+    </diagnostics>
+    <diagnostics diagnosticType="INFO" message="Maximum actual latency total 64,0ms is less or equal to expected maximum end to end latency 80,0ms">
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.3"/>
+    </diagnostics>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="source hazard_src"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.6"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.31"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.31"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue" value="50.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="sampling"/>
+      <values xsi:type="result:StringValue" value="path hazard_flow"/>
+      <diagnostics diagnosticType="INFO" message="Assume Periodic dispatch because period is set">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.2"/>
+      </diagnostics>
+      <diagnostics diagnosticType="INFO" message="Best case 0 ms worst case 50.0ms (period) sampling delay">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.2"/>
+      </diagnostics>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.2"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue" value="2.0"/>
+      <values xsi:type="result:RealValue" value="4.0"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="processing time"/>
+      <values xsi:type="result:StringValue" value="path hazard_flow"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.20/@componentInstance.2"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value=""/>
+      <diagnostics diagnosticType="INFO" message="Adding latency subtotal from protocols and hardware - shown with ()">
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.54"/>
+      </diagnostics>
+      <subResults>
+        <values xsi:type="result:RealValue" value="2.0"/>
+        <values xsi:type="result:RealValue" value="5.0"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value="transmission time"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Using data transfer time">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value="queued"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <diagnostics diagnosticType="INFO" message="Ignoring queuing time of 35.0ms">
+          <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+        </diagnostics>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <subResults>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:RealValue"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value="sampling protocol/bus"/>
+        <values xsi:type="result:StringValue" value=""/>
+        <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.0"/>
+      </subResults>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@connectionInstance.54"/>
+    </subResults>
+    <subResults>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:RealValue"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="no sampling/queuing latency"/>
+      <values xsi:type="result:StringValue" value="sink indicator_sink"/>
+      <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@componentInstance.13"/>
+    </subResults>
+    <modelElement href="../../Swiatla_Samochodowe_CarLightingControlSystem_impl_Instance.aaxl2#/0/@endToEndFlow.3"/>
+  </results>
+</result:AnalysisResult>
