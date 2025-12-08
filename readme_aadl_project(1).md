@@ -211,7 +211,7 @@ Ustawienia analizy przepływu danych:
 
 Ścieżka załączenia świateł awaryjnych
 
-![Awaryjne](Analiza_swiatla_awaryjne.png
+![Awaryjne](Analiza_swiatla_awaryjne.png)
 
 ### Wnioski
 
@@ -223,16 +223,16 @@ Ustawienia analizy przepływu danych:
   
 ---
 
+## Inne informacje zależne od tematu
+
 
 ---
 
-## 📚 Bibliografia i standardy
+## Literatura
 
-- **AADL Standard:** SAE AS5506C - Architecture Analysis & Design Languag
-- **Automotive Standards:** 
-  - ISO 26262 (Functional Safety)
-  - ECE R7 (Światła pozycyjne, hamowania, kierunkowskazy)
-  - ECE R48 (Instalacja urządzeń oświetleniowych)
-- **CAN Protocol:** ISO 11898-1 (Controller Area Network)
+- SAE International, "AS5506C: Architecture Analysis & Design Language (AADL)," SAE International Standard, 2017. Available: https://www.sae.org/standards/content/as5506c/
+  
+- P. H. Feiler and D. P. Gluch, Model-Based Engineering with AADL: An Introduction to the SAE Architecture Analysis & Design Language, Addison-Wesley Professional, 2012. ISBN: 978-0321888945
 
+- OSATE 2 - Open Source AADL Tool Environment. Available: https://osate.org/
 
