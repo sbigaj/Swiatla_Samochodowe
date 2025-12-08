@@ -122,7 +122,7 @@ Niezależne wątki przetwarzające realizujące logikę biznesową systemu:
 
 ---
 
-### ⚙️ **Process (Proces główny)**
+### **Process (Proces główny)**
 
 | Proces | Opis |
 |--------|------|
@@ -133,7 +133,7 @@ Niezależne wątki przetwarzające realizujące logikę biznesową systemu:
 
 ---
 
-### 🖥️ **Processor (Procesor)**
+### **Processor (Procesor)**
 
 | Procesor | Opis |
 |----------|------|
@@ -149,7 +149,7 @@ Niezależne wątki przetwarzające realizujące logikę biznesową systemu:
 
 ---
 
-### 🔄 **End-to-End Flows (Przepływy end-to-end)**
+### **End-to-End Flows (Przepływy end-to-end)**
 
 Kluczowe ścieżki przepływu danych przez cały system:
 
@@ -162,7 +162,7 @@ Kluczowe ścieżki przepływu danych przez cały system:
 
 ---
 
-### 🏗️ **System (System główny)**
+### **System (System główny)**
 
 | System | Opis |
 |--------|------|
@@ -174,6 +174,7 @@ Kluczowe ścieżki przepływu danych przez cały system:
 
 Na rysunku przedstawiono diagram modelu systemu sterowania światłami samochodowymi:
 
+https://github.com/sbigaj/Swiatla_Samochodowe/blob/main/Diagram_modelu.png
 
 ---
 
