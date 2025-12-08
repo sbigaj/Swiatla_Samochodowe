@@ -15,7 +15,7 @@ Model systemu sterowania oświetleniem pojazdu zaprojektowany w języku Architec
 
 ### Opis ogólny
 
-System sterowania światłami samochodowymi składa się z:
+Model przedstawia System Sterowania Oświetleniem Samochodu zbudowany w środowisku OSATE w języku AADL. System odpowiada za zbieranie danych z urządzeń wejściowych oraz sterowanie urządzeniami wykonawczymi. Składa się z następujących elementów:
 
 - **Urządzeń wejściowych** - przełączniki, dźwignie, czujniki (9 urządzeń)
 - **Jednostki sterującej ECU** - procesor przetwarzający sygnały
@@ -28,6 +28,8 @@ Model implementuje rzeczywistą architekturę systemu świateł pojazdu samochod
 ---
 
 ### Opis dla użytkownika
+
+System sterowania oświetleniem zapewnia automatyczne i manualne zarządzanie oświetleniem pojazdu. Kierowca korzysta z przełączników i czujników, a system dokonuje odpowiednich decyzji dotyczących oświetlenia:
 
 System obsługuje następujące funkcje oświetlenia pojazdu:
 
