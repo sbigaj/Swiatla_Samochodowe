@@ -44,7 +44,7 @@ System obsługuje następujące funkcje oświetlenia pojazdu:
 9. **Światła cofania** - oświetlenie podczas jazdy wstecz
 10. **Oświetlenie tablicy rejestracyjnej** - związane ze światłami pozycyjnymi
 
-#### **Inteligentne funkcje:**
+#### **Dodatkowe funkcje:**
 
 - **Auto-wyłączanie długich świateł** - gdy czujnik wykryje zbliżający się pojazd
 - **Automatyczne światła mijania** - czujnik światła otoczenia (zmierzch/tunel)
@@ -67,7 +67,7 @@ Fizyczne urządzenia generujące sygnały wejściowe od użytkownika i czujnikó
 | `FogLightFrontSwitch` | Przełącznik świateł przeciwmgielnych przednich |
 | `FogLightRearSwitch` | Przełącznik świateł przeciwmgielnych tylnych |
 | `HazardButton` | Przycisk świateł awaryjnych |
-| `BrakePedalSwitch` | Czujnik pedału hamulca - wykrywa naciśnięcie |
+| `BrakePedalSwitch` | Czujnik pedału hamulca - wykrywa naciśnięciec |
 | `RearGearSwitch` | Czujnik biegu wstecznego |
 | `ApproachingCarSensor` | Czujnik zbliżających się pojazdów (radar/kamera) |
 
@@ -126,7 +126,7 @@ Niezależne wątki przetwarzające realizujące logikę biznesową systemu:
 
 | Proces | Opis |
 |--------|------|
-| `CarLightsController` | Główny proces integrujący wszystkie wątki sterowania. Zawiera porty wejściowe/wyjściowe, zarządza połączeniami między wątkami (np. przekazywanie stanu świateł mijania do kontrolera długich i przeciwmgielnych) oraz implementuje flow paths dla analizy end-to-end. Wykonuje się na procesorze ECU. |
+| `CarLightsController` | Główny proces integrujący wszystkie wątki sterowania. Zawiera porty wejściowe/wyjściowe, zarządza połączeniami między wątkami (np. przekazywanie stanu świateł mijania do kontrolera długich i przeciwmgielnych) oraz implementuje flow paths dla analizy end-to-end. |
 
 **Subkomponenty:**
 - 6 wątków: `MainLightControl`, `HighBeamControl`, `IndicatorsControl`, `FogLightsControl`, `StopLightControl`, `ReverseLightControl`
@@ -153,14 +153,12 @@ Niezależne wątki przetwarzające realizujące logikę biznesową systemu:
 
 Kluczowe ścieżki przepływu danych przez cały system:
 
-| Flow | Ścieżka | Budżet czasu | Priorytet |
-|------|---------|--------------|-----------|
-| `brake_to_stop_etef` | Pedał hamulca → CAN → ECU/StopLightControl → CAN → Światło STOP | **10-80ms** | 🔴 Krytyczny |
-| `position_lights_etef` | Dźwignia świateł → CAN → ECU/MainLightControl → CAN → Światła pozycyjne | 50-150ms | 🟡 Średni |
-| `high_beam_etef` | Dźwignia długich → CAN → ECU/HighBeamControl → CAN → Długie | 30-100ms | 🟢 Normalny |
-| `hazard_lights_etef` | Przycisk awaryjnych → CAN → ECU/IndicatorsControl → CAN → Kierunkowskazy | **20-80ms** | 🟠 Wysoki |
-
-**Analiza:** Model umożliwia przeprowadzenie Flow Latency Analysis w OSATE, która oblicza rzeczywiste opóźnienia end-to-end, weryfikuje zgodność z budżetami czasowymi i identyfikuje wąskie gardła systemu.
+| Flow | Ścieżka | Budżet czasu |
+|------|---------|--------------|
+| `brake_to_stop_etef` | Pedał hamulca → CAN → ECU/StopLightControl → CAN → Światło STOP | **10-80ms** |
+| `position_lights_etef` | Dźwignia świateł → CAN → ECU/MainLightControl → CAN → Światła pozycyjne | 50-150ms |
+| `high_beam_etef` | Dźwignia długich → CAN → ECU/HighBeamControl → CAN → Długie | 30-100ms |
+| `hazard_lights_etef` | Przycisk awaryjnych → CAN → ECU/IndicatorsControl → CAN → Kierunkowskazy | **20-80ms** |
 
 ---
 
@@ -168,24 +166,14 @@ Kluczowe ścieżki przepływu danych przez cały system:
 
 | System | Opis |
 |--------|------|
-| `CarLightingControlSystem` | Główny system integrujący wszystkie komponenty modelu. Zawiera procesor ECU, magistralę CAN, 9 urządzeń wejściowych, 10 urządzeń wyjściowych oraz proces CarLightsController. Definiuje wszystkie połączenia danych między urządzeniami a procesorem oraz połączenia magistrali (bus access). Zawiera właściwości bindingu określające, że proces wykonuje się na ECU, a wszystkie połączenia danych przechodzą przez CAN. Implementuje 4 end-to-end flows dla analizy opóźnień. |
-
-**Architektura:**
-- 1x Processor (ECU)
-- 1x Bus (CAN_Bus)
-- 9x Device Input
-- 10x Device Output
-- 1x Process (6 threads)
-- 4x End-to-End Flows
+| `CarLightingControlSystem` | Główny system integrujący wszystkie komponenty modelu. Zawiera procesor ECU, magistralę CAN, 9 urządzeń wejściowych, 10 urządzeń wyjściowych oraz proces CarLightsController. Definiuje wszystkie połączenia danych między urządzeniami a procesorem oraz połączenia magistrali (bus access). Zawiera właściwości bindingu określające, że proces wykonuje się na ECU, a wszystkie połączenia danych przechodzą przez CAN. |
 
 ---
 
-## 🔧 Narzędzia i technologie
+## Model - rysunek
 
-- **Język:** AADL (Architecture Analysis & Design Language)
-- **Środowisko:** OSATE (Open Source AADL Tool Environment)
-- **Standard:** SAE AS5506C
-- **Analiza:** Flow Latency Analysis, Architecture Consistency Check
+Na rysunku przedstawiono diagram modelu systemu sterowania światłami samochodowymi:
+
 
 ---
 
