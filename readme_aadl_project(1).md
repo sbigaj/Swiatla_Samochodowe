@@ -174,8 +174,8 @@ Kluczowe ścieżki przepływu danych przez cały system:
 
 Na rysunku przedstawiono diagram modelu systemu sterowania światłami samochodowymi:
 
-!(Diagram_modelu.png)
-https://github.com/sbigaj/Swiatla_Samochodowe/blob/main/Diagram_modelu.png
+![alt text]([http://url/to/img.png](https://github.com/sbigaj/Swiatla_Samochodowe/blob/main/Diagram_modelu.png))
+
 
 ---
 
@@ -206,45 +206,6 @@ Total: ~55-115ms ✅ (< 150ms budget)
 
 ---
 
-## 📁 Struktura projektu
-
-```
-.
-├── README.md                          # Ten plik
-└── Swiatla_Samochodowe.aadl          # Model AADL
-```
-
----
-
-## 🚀 Jak używać
-
-### Wymagania:
-- OSATE 2.x (https://osate.org/download-and-install.html)
-- Plugin: Flow Latency Analysis (zazwyczaj wbudowany)
-
-### Kroki:
-
-1. **Import projektu do OSATE:**
-   - File → New → AADL Project
-   - Skopiuj plik `.aadl` do folderu projektu
-
-2. **Walidacja modelu:**
-   - Otwórz plik `.aadl`
-   - OSATE automatycznie sprawdzi składnię
-
-3. **Instancjonowanie:**
-   - Prawym na `system implementation CarLightingControlSystem.impl`
-   - Wybierz **Instantiate**
-   - Powstanie plik `.aaxl2` z instancją
-
-4. **Analiza przepływów:**
-   - Prawym na instancję (plik `.aaxl2`)
-   - **Analyses → Timing → Check flow latency**
-   - Wyniki w oknie **Problems** i **Flow Latency Analysis**
-
-5. **Wizualizacja:**
-   - Użyj widoku **AADL Diagrams** do graficznej reprezentacji
-   - Flow paths można wyświetlić za pomocą **Show Flow Path**
 
 ---
 
@@ -257,19 +218,4 @@ Total: ~55-115ms ✅ (< 150ms budget)
   - ECE R48 (Instalacja urządzeń oświetleniowych)
 - **CAN Protocol:** ISO 11898-1 (Controller Area Network)
 
----
 
-## 📄 Licencja
-
-Model stworzony na potrzeby projektu akademickiego - AGH Kraków.
-
----
-
-## 📧 Kontakt
-
-**Szymon Bigaj**  
-✉️ sbigaj@student.agh.edu.pl
-
----
-
-*Model opracowany w ramach projektu z zakresu modelowania systemów wbudowanych w języku AADL.*
