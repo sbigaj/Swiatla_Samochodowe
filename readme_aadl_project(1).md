@@ -195,7 +195,7 @@ Ustawienia analizy przepływu danych:
 - najgorszy czas przetwarzania: maksymalny czaas wykonania obliczeń
 - czas kolejkowania: wyłączony
 
-### Uzyskane analizy
+### Wyniki przeprowadzonych analiz
 
 Ścieżka od hamulca do światła stopu:
 
@@ -205,11 +205,22 @@ Ustawienia analizy przepływu danych:
 
 ![Pozycyjne](Analiza_swiatla_pozycyjne.png)
 
-1. Otwórz model w OSATE
-2. Zainstancjonuj system: prawym na `CarLightingControlSystem.impl` → **Instantiate**
-3. Uruchom analizę: **Analyses → Timing → Check flow latency**
-4. Wyniki pokażą szczegółowy breakdown opóźnień dla każdego flow
+Ścieżka załączenia świateł drogowych
 
+![Drogowe](Analiza_swiatla_drogowe.png)
+
+Ścieżka załączenia świateł awaryjnych
+
+![Awaryjne](Analiza_swiatla_awaryjne.png
+
+### Wnioski
+
+* Wszystkie cztery ścieżki spełniają założone maksymalne czasy opóźnień, co potwierdza zgodność modelu z wymaganiami funkcjonalnymi systemu oświetlenia samochodowego.
+
+* W trzech ścieżkach (STOP, drogowe, awaryjne) brak jest odchyleń, które mogłyby wskazywać na ryzyko naruszenia wymagań czasowych.
+
+* Jedynym elementem wymagającym uwagi jest jitter w ścieżce świateł pozycyjnych, gdzie zbyt niski minimalny czas reakcji prowadzi do przekroczenia zdefiniowanego zakresu zmienności. Może to sugerować potrzebę doprecyzowania założeń projektowych lub optymalizacji harmonogramu przetwarzania w ECU.
+  
 ---
 
 
