@@ -174,6 +174,7 @@ Kluczowe ścieżki przepływu danych przez cały system:
 
 Na rysunku przedstawiono diagram modelu systemu sterowania światłami samochodowymi:
 
+!(Diagram_modelu.png)
 https://github.com/sbigaj/Swiatla_Samochodowe/blob/main/Diagram_modelu.png
 
 ---
