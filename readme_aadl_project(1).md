@@ -174,28 +174,18 @@ Kluczowe ścieżki przepływu danych przez cały system:
 
 Na rysunku przedstawiono diagram modelu systemu sterowania światłami samochodowymi:
 
-![alt text]([http://url/to/img.png](https://github.com/sbigaj/Swiatla_Samochodowe/blob/main/Diagram_modelu.png))
+![Diagram Modelu](Diagram_modelu.png)
 
 
 ---
 
-## 📊 Analiza opóźnień (Flow Latency Analysis)
+## Analiza modelu
 
 Model zawiera pełną specyfikację przepływów umożliwiającą analizę czasową:
 
-### Przykładowe wyniki (teoretyczne):
+### Analiza przepływu pełnego (End-to-End Flows:
 
-**Światła STOP (brake_to_stop_etef):**
-```
-Sensor → CAN(2-5ms) → ECU(0.5-1ms) → CAN(2-5ms) → Actuator
-Total: ~15-70ms ✅ (< 80ms budget)
-```
-
-**Światła pozycyjne (position_lights_etef):**
-```
-Switch → CAN(2-5ms) → ECU(2-5ms) → CAN(2-5ms) → Lights
-Total: ~55-115ms ✅ (< 150ms budget)
-```
+Po przez implementację informacji dotyczących przepływu 
 
 ### Jak uruchomić analizę:
 
