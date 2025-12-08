@@ -155,10 +155,10 @@ Kluczowe ścieżki przepływu danych przez cały system:
 
 | Flow | Ścieżka | Budżet czasu |
 |------|---------|--------------|
-| `brake_to_stop_etef` | Pedał hamulca → CAN → ECU/StopLightControl → CAN → Światło STOP | **10-80ms** |
+| `brake_to_stop_etef` | Pedał hamulca → CAN → ECU/StopLightControl → CAN → Światło STOP | 10-80ms |
 | `position_lights_etef` | Dźwignia świateł → CAN → ECU/MainLightControl → CAN → Światła pozycyjne | 50-150ms |
 | `high_beam_etef` | Dźwignia długich → CAN → ECU/HighBeamControl → CAN → Długie | 30-100ms |
-| `hazard_lights_etef` | Przycisk awaryjnych → CAN → ECU/IndicatorsControl → CAN → Kierunkowskazy | **20-80ms** |
+| `hazard_lights_etef` | Przycisk awaryjnych → CAN → ECU/IndicatorsControl → CAN → Kierunkowskazy | 20-80ms |
 
 ---
 
@@ -176,16 +176,19 @@ Na rysunku przedstawiono diagram modelu systemu sterowania światłami samochodo
 
 ![Diagram Modelu](Diagram_modelu.png)
 
-
 ---
 
 ## Analiza modelu
 
-Model zawiera pełną specyfikację przepływów umożliwiającą analizę czasową:
+Model zawiera pełną specyfikację przepływów umożliwiającą analizę pełnego przepływu
 
-### Analiza przepływu pełnego (End-to-End Flows:
+### Analiza przepływu pełnego (End-to-End Flows):
 
-Po przez implementację informacji dotyczących przepływu 
+Po przez implementację informacji dotyczących przepływu e urządzeniach wejściowych, wątkach oraz urządzeniach wyjściowych przeprowadzono analizę pełnego przepływu dla czterech wybranych ścieżek przepływu danych:
+* ** Ścieżka od hamulca do światła stopu ** - Pedał hamulca → CAN → ECU/StopLightControl → CAN → Światło STOP - Oczekiwany czas: 10-80ms
+* ** Ścieżka załączenia świateł pozycyjnych ** - Dźwignia świateł → CAN → ECU/MainLightControl → CAN → Światła pozycyjne - Oczekiwany czas: 50-150ms
+* ** Ścieżka załączenia świateł drogowych ** - Dźwignia długich → CAN → ECU/HighBeamControl → CAN → Długie - Oczekiwany czas: 30-100ms
+* ** Ścieżka załączenia świateł awaryjnych ** - Przycisk awaryjnych → CAN → ECU/IndicatorsControl → CAN → Kierunkowskazy - Oczekiwany czas: 20-80ms
 
 ### Jak uruchomić analizę:
 
@@ -201,7 +204,7 @@ Po przez implementację informacji dotyczących przepływu
 
 ## 📚 Bibliografia i standardy
 
-- **AADL Standard:** SAE AS5506C - Architecture Analysis & Design Language
+- **AADL Standard:** SAE AS5506C - Architecture Analysis & Design Languag
 - **Automotive Standards:** 
   - ISO 26262 (Functional Safety)
   - ECE R7 (Światła pozycyjne, hamowania, kierunkowskazy)
