@@ -143,7 +143,7 @@ Niezależne wątki przetwarzające realizujące logikę biznesową systemu:
 
 ---
 
-### 🚌 **Bus (Magistrala komunikacyjna)**
+### **Bus (Magistrala komunikacyjna)**
 
 | Magistrala | Opis |
 |------------|------|
