@@ -227,7 +227,9 @@ Ustawienia analizy przepływu danych:
 
 ## Inne informacje zależne od tematu
 
-
+* Urządzenia wejściowe i wyjściowe zostały dobrane tak by reprezentowały fizyczne elementy w standardowym samochodzie
+* Dla uproszczenia te lampy które są zwielokrotnione z przodu, tyłu oraz z obu stron samochodu a reprezentują tą samą funkcjonalność zostały zdeifniowane jako jedno urządzenie (w rzeczywistości każde z nich jest sterowane w takich sam sposób)
+* 
 ---
 
 ## Literatura
