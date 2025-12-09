@@ -229,7 +229,7 @@ Ustawienia analizy przepływu danych:
 
 * Urządzenia wejściowe i wyjściowe zostały dobrane tak by reprezentowały fizyczne elementy w standardowym samochodzie
 * Dla uproszczenia te lampy które są zwielokrotnione z przodu, tyłu oraz z obu stron samochodu a reprezentują tą samą funkcjonalność zostały zdeifniowane jako jedno urządzenie (w rzeczywistości każde z nich jest sterowane w takich sam sposób)
-* 
+
 ---
 
 ## Literatura
@@ -239,4 +239,3 @@ Ustawienia analizy przepływu danych:
 - P. H. Feiler and D. P. Gluch, Model-Based Engineering with AADL: An Introduction to the SAE Architecture Analysis & Design Language, Addison-Wesley Professional, 2012. ISBN: 978-0321888945
 
 - OSATE 2 - Open Source AADL Tool Environment. Available: https://osate.org/
-
